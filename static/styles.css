@@ -1,8 +1,21 @@
-.spinner{
-  font-size: 140px;
+@keyframes spin {
+    100% { transform: rotate(360deg); }
 }
+
+.spinner {
+    font-size: 140px;
+    display: inline-block;
+    animation: spin 2s linear infinite;
+    padding-bottom: 12px;
+}
+
 .spinner:after {
-  content: '◌';
+    content: '◌';
+}
+
+#symbols {
+    display: flex;
+    gap: 10px;
 }
 
 #chart {
